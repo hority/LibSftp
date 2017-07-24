@@ -1,5 +1,5 @@
 # LibSftp
-Experimental impl focused on SFTP using SSH.NET.
+This is an experimental impl focused on SFTP using SSH.NET.
 
 ## Requirement
 [sshnet/SSH.NET](https://github.com/sshnet/SSH.NET)
