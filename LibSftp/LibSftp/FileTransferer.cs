@@ -57,7 +57,6 @@ namespace LibSftp
                 {
                     client.DownloadFile(remotePath, fs, null);
                 }
-                client.Disconnect();
             }
         }
 
@@ -78,7 +77,6 @@ namespace LibSftp
                 {
                     client.UploadFile(fs, remotePath, true, null);
                 }
-                client.Disconnect();
             }
         }
     }
