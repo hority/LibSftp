@@ -12,6 +12,21 @@ namespace LibSftp
     public class FileTransferer
     {
         /// <summary>
+        /// FileTransfererの新しいインスタンスを作成します
+        /// </summary>
+        /// <param name="host"></param>
+        /// <param name="port"></param>
+        /// <param name="username"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
+        public static FileTransferer Create(string host, int port, string username, string password)
+        {
+            var method = new PasswordAuthenticationMethod(username, password);
+            var info = new ConnectionInfo(host, port, username, method);
+            return new FileTransferer(info);
+        }
+
+        /// <summary>
         /// 接続の情報
         /// </summary>
         private ConnectionInfo ConnectionInfo { get; set; }
