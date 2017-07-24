@@ -1,5 +1,5 @@
 # LibSftp
-experimental impl by SSH.NET
+experimental impl using SSH.NET
 
 ## Built With
 [SSH.NET](https://github.com/sshnet/SSH.NET)
