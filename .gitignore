@@ -1,4 +1,5 @@
 *.config
 *.suo
+*.user
 LibSftp/**/bin/**
 LibSftp/**/obj/**
