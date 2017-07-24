@@ -47,7 +47,7 @@ namespace LibSftp
                 client.Connect();
                 using (var fs = System.IO.File.OpenWrite(localPath))
                 {
-                    client.DownloadFile(remotePath, fs, _ => { });
+                    client.DownloadFile(remotePath, fs, null);
                 }
             }
         }
