@@ -26,15 +26,8 @@ namespace LibSftp
             return new FileTransferer(info);
         }
 
-        /// <summary>
-        /// 接続の情報
-        /// </summary>
         private ConnectionInfo ConnectionInfo { get; set; }
 
-        /// <summary>
-        /// コンストラクタ
-        /// </summary>
-        /// <param name="conn"></param>
         public FileTransferer(ConnectionInfo conn)
         {
             this.ConnectionInfo = conn;
@@ -52,7 +45,6 @@ namespace LibSftp
             using (var client = new SftpClient(this.ConnectionInfo))
             {
                 client.Connect();
-                // 書き込みモードでローカルファイルを開く(なければ作成、あれば上書き)
                 using (var fs = System.IO.File.OpenWrite(localPath))
                 {
                     client.DownloadFile(remotePath, fs, _ => { });
@@ -72,7 +64,6 @@ namespace LibSftp
             using (var client = new SftpClient(this.ConnectionInfo))
             {
                 client.Connect();
-                // 書き込みモードでローカルファイルを開く
                 using (var fs = System.IO.File.OpenRead(localPath))
                 {
                     client.UploadFile(fs, remotePath, true, null);
