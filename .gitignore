@@ -1,5 +1,9 @@
 *.config
 *.suo
 *.user
+*.vsmdi
+*.testrunconfig
 LibSftp/**/bin/**
 LibSftp/**/obj/**
+LibSftp/LibSftpTestProject/**
+LibSftp/TestResults/**

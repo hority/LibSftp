@@ -55,7 +55,7 @@ namespace LibSftp
                 // 書き込みモードでローカルファイルを開く(なければ作成、あれば上書き)
                 using (var fs = System.IO.File.OpenWrite(localPath))
                 {
-                    client.DownloadFile(remotePath, fs, null);
+                    client.DownloadFile(remotePath, fs, _ => { });
                 }
             }
         }
